@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from "react";
+
+import Users from "./components/Users";
+import SearchBox from "./components/SearchBox";
+
 import "./styles/App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="react-calculator">
+      <SearchBox />
+      <Users 
+        imgSource="https://www.bootdey.com/img/Content/avatar/avatar1.png"
+        name="Franklin Sanchez"
+        status="status busy"/>
+        <Users 
+        imgSource="https://www.bootdey.com/img/Content/avatar/avatar2.png"
+        name="Carol Mirabal"
+        status="status offline"/>
+        <Users 
+        imgSource="https://www.bootdey.com/img/Content/avatar/avatar3.png"
+        name="Salma PorDonde"
+        status="status away"/>
+        <Users 
+        imgSource="https://www.bootdey.com/img/Content/avatar/avatar4.png"
+        name="Porque Aja"
+        status="status online"/>
+    </main>
   );
-}
+};
 
 export default App;
